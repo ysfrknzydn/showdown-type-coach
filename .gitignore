@@ -1,0 +1,4 @@
+.DS_Store
+.Rhistory
+safari-project/**/xcuserdata/
+*.xcuserstate

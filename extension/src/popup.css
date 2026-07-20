@@ -1,0 +1,116 @@
+* { box-sizing: border-box; }
+body {
+	margin: 0;
+	width: 380px;
+	max-height: 560px;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+	font-size: 13px;
+	color: #222;
+	display: flex;
+	flex-direction: column;
+}
+.p-header {
+	background: #3b4cca;
+	color: #fff;
+	padding: 10px 12px 0;
+}
+.p-header h1 {
+	margin: 0 0 8px;
+	font-size: 15px;
+}
+.p-tabs {
+	display: flex;
+	gap: 4px;
+}
+.p-tab {
+	background: rgba(255,255,255,0.15);
+	color: #fff;
+	border: none;
+	padding: 6px 10px;
+	border-radius: 6px 6px 0 0;
+	cursor: pointer;
+	font-size: 12px;
+}
+.p-tab.active {
+	background: #fff;
+	color: #3b4cca;
+	font-weight: 700;
+}
+.p-panel {
+	padding: 10px 12px;
+	overflow-y: auto;
+	max-height: 460px;
+}
+.p-hint {
+	color: #666;
+	margin: 0 0 8px;
+	line-height: 1.4;
+}
+.p-grid-scroll {
+	overflow: auto;
+}
+table.p-grid {
+	border-collapse: collapse;
+	font-size: 10.5px;
+}
+table.p-grid th, table.p-grid td {
+	border: 1px solid #eee;
+	padding: 2px 4px;
+	text-align: center;
+	white-space: nowrap;
+}
+td.psh-superb { background: #e3f4e6; }
+td.psh-resisted { background: #fdecec; }
+td.psh-immune { background: #f6d6d6; font-weight: 700; }
+.psh-badge {
+	display: inline-block;
+	padding: 1px 6px;
+	border-radius: 9px;
+	font-size: 10px;
+	font-weight: 700;
+}
+.p-picker {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 4px;
+	margin-bottom: 10px;
+}
+.p-picker button {
+	border: 1px solid #ddd;
+	border-radius: 9px;
+	padding: 3px 9px;
+	font-size: 11px;
+	font-weight: 700;
+	cursor: pointer;
+	background: #f4f4f4;
+}
+.p-picker button.selected {
+	outline: 2px solid #3b4cca;
+}
+.p-lookup-result .p-row {
+	margin: 6px 0;
+	line-height: 1.5;
+}
+.p-lookup-result .p-row-label {
+	font-weight: 700;
+	display: block;
+	color: #3b4cca;
+	font-size: 11px;
+	text-transform: uppercase;
+	letter-spacing: .03em;
+}
+.p-glossary dt {
+	font-weight: 700;
+	color: #3b4cca;
+	margin-top: 8px;
+}
+.p-glossary dd {
+	margin: 2px 0 0;
+	line-height: 1.4;
+}
+.p-footer {
+	padding: 8px 12px;
+	font-size: 11px;
+	color: #777;
+	border-top: 1px solid #eee;
+}

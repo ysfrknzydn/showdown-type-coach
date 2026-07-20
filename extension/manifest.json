@@ -1,0 +1,34 @@
+{
+  "manifest_version": 3,
+  "name": "Showdown Type Coach",
+  "version": "1.0.0",
+  "description": "Beginner-friendly helper for Pokemon Showdown: live type effectiveness hints during battle, a full type chart reference, and a short glossary of core mechanics.",
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_popup": "src/popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://play.pokemonshowdown.com/*"],
+      "js": ["src/typechart.js", "src/statmath.js", "src/randbats.js", "src/damage.js", "src/recommend.js", "src/content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["src/inject.js"],
+      "matches": ["https://play.pokemonshowdown.com/*"]
+    }
+  ]
+}

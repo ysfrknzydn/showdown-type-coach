@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Showdown Type Coach</title>
+<link rel="stylesheet" href="popup.css">
+</head>
+<body>
+	<header class="p-header">
+		<h1>Type Coach</h1>
+		<nav class="p-tabs">
+			<button class="p-tab active" data-tab="grid">Type Chart</button>
+			<button class="p-tab" data-tab="lookup">Pokemon Lookup</button>
+			<button class="p-tab" data-tab="glossary">Glossary</button>
+		</nav>
+	</header>
+
+	<section id="tab-grid" class="p-panel">
+		<p class="p-hint">Rows attack, columns defend. Find your move's type on the left, the target's type across the top.</p>
+		<div id="grid-container" class="p-grid-scroll"></div>
+	</section>
+
+	<section id="tab-lookup" class="p-panel" hidden>
+		<p class="p-hint">Pick one or two types to see what's strong and weak against that combo — handy for figuring out a Pokemon's matchups before you ever fight one.</p>
+		<div id="type-picker" class="p-picker"></div>
+		<div id="lookup-result" class="p-lookup-result"></div>
+	</section>
+
+	<section id="tab-glossary" class="p-panel" hidden>
+		<dl id="glossary-list" class="p-glossary"></dl>
+	</section>
+
+	<footer class="p-footer">Open a battle at play.pokemonshowdown.com to see live matchup hints for your active Pokemon.</footer>
+
+	<script src="typechart.js"></script>
+	<script src="popup.js"></script>
+</body>
+</html>
